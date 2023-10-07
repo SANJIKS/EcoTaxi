@@ -9,4 +9,5 @@ class CustomUserSerializer(serializers.ModelSerializer):
 class RegistrationSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        exclude = ('username', 'last_login', 'is_superuser', 'is_staff', 'is_active', 'date_joined', 'groups', 'user_permissions')
+        fields = ('id', 'username', 'password')
+        extra_kwargs = {'password': {'write_only': True}}
