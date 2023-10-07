@@ -19,6 +19,6 @@ class CustomTokenObtainPairView(TokenObtainPairView):
                 raise exceptions.ValidationError("Пользователь не найден")
 
             if not user.phone_number:
-                return Response({"detail": "Пользователь не зарегистрирован!"}, status=status.HTTP_400_BAD_REQUEST)
+                return Response({"user_id": user.id}, status=status.HTTP_400_BAD_REQUEST)
 
         return response
