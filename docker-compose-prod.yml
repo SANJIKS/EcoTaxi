@@ -50,7 +50,7 @@ services:
     depends_on:
       - api
     ports:
-      - "80:80"
+      - "79:79"
 
 volumes:
   static_volume:
