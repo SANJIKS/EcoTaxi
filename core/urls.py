@@ -27,7 +27,8 @@ urlpatterns = [
          cache_timeout=0), name='schema-swagger-ui'),
     path('user/', include('djoser.urls')),
     path('login/', include('djoser.urls.jwt')),
-    path('', include('apps.users.urls'))
+    path('', include('apps.users.urls')),
+    path('drivers/', include('apps.drivers.urls'))
 ]
 
 

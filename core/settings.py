@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'djoser',
     
-    'apps.users'
+    'apps.users',
+    'apps.drivers'
 
 ]
 
